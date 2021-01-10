@@ -5,6 +5,7 @@ import com.bootcamp.model.Employee;
 import java.util.List;
 
 public interface EmployeeDAO {
+
     void addEmployee(Employee employee);
 
     List<Employee> getAllEmployees();
@@ -13,5 +14,5 @@ public interface EmployeeDAO {
 
     Employee updateEmployee(Employee employee);
 
-    Employee getEmployee(int EmployeeId);
+    Employee getEmployee(int employeeId);
 }

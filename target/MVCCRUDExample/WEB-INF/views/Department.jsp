@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: agung
-  Date: 08/01/2021
-  Time: 9:59
+  Date: 10/01/2021
+  Time: 11:50
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -12,34 +12,30 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html, charset-UTF-8">
-    <title>Employee List</title>
+    <title>Department List</title>
 </head>
 <body>
     <div align="center">
-        <h1>Employee List</h1>
+        <h1>Department List</h1>
         <table border="1">
             <th>Name</th>
-            <th>Email</th>
-            <th>Address</th>
-            <th>Telephone</th>
+            <th>Location</th>
             <th>Action</th>
 
-            <c:forEach var="employee" items="${listEmployee}">
+            <c:forEach var="department" items="${listDepartment}">
                 <tr>
-                    <td>${employee.name}</td>
-                    <td>${employee.email}</td>
-                    <td>${employee.address}</td>
-                    <td>${employee.telephone}</td>
+                    <td>${department.name}</td>
+                    <td>${department.location}</td>
                     <td>
-                        <a href="editEmployee?id=${employee.id}">Edit</a>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="deleteEmployee?id=${employee.id}">Delete</a>
+                        <a href="editDepartment?id=${department.id}">Edit</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="deleteDepartment?id=${department.id}">Delete</a>
                     </td>
                 </tr>
             </c:forEach>
         </table>
         <h4>
-            New Employee Register <a href="newEmployee">here</a>
+            New Department Register <a href="newDepartment">here</a>
         </h4>
     </div>
 </body>
